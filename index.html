@@ -1,1 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東京都の相続税申告・不動産対策なら | 相続専門税理士による初回無料相談</title>
+    <meta name="description" content="親が亡くなり相続税がいくらかかるか不安な方、東京都内に実家がある方向けの相続税申告LP。遺品整理から不動産売却までワンストップでサポート。">
+    <style>
+        /* =========================================
+           基本設定・ユニバーサルデザイン配慮
+        ========================================= */
+        :root {
+            --primary-color: #1a3a5f; /* 信頼のネイビー */
+            --secondary-color: #4a7c59; /* 安心のセージグリーン */
+            --accent-color: #e67e22; /* 行動を促すテラコッタオレンジ */
+            --bg-light: #f8f9fa;
+            --text-color: #333;
+            --font-main: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            font-size: 18px; /* 高齢者配慮：標準より大きめ */
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; }
+
+       .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+       .section-padding { padding: 80px 0; }
+       .bg-gray { background-color: var(--bg-light); }
+       .text-center { text-align: center; }
+
+       .btn {
+            display: inline-block;
+            padding: 20px 40px;
+            background-color: var(--accent-color);
+            color: #fff;
+            font-weight: bold;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+       .btn:hover { transform: translateY(-3px); }
+
+        /* =========================================
+           ヘッダー（電話ボタン固定）
+        ========================================= */
+        header {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 1000;
+        }
+       .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+       .logo { font-weight: bold; font-size: 1.4rem; color: var(--primary-color); }
+       .header-contact { text-align: right; }
+       .header-tel { font-size: 1.5rem; color: var(--primary-color); font-weight: bold; }
+
+        /* =========================================
+           ヒーローセクション（ファーストビュー）
+        ========================================= */
+       .hero {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+       .hero h1 { font-size: 2.2rem; margin-bottom: 20px; line-height: 1.3; }
+       .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+       .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+       .stat-box {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+       .stat-num { display: block; font-size: 1.8rem; font-weight: bold; color: #ffeb3b; }
+
+        /* =========================================
+           お悩みセクション
+        ========================================= */
+       .problem-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+       .problem-item {
+            background: #fff;
+            padding: 25px;
+            border-left: 5px solid var(--secondary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* =========================================
+           強みセクション（3つの特徴）
+        ========================================= */
+       .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+       .feature-card {
+            text-align: center;
+            padding: 20px;
+        }
+       .feature-card img { border-radius: 10px; margin-bottom: 20px; }
+       .feature-card h3 { color: var(--primary-color); margin-bottom: 15px; }
+
+        /* =========================================
+           料金表
+        ========================================= */
+       .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: #fff;
+        }
+       .price-table th,.price-table td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+       .price-table th { background: var(--primary-color); color: #fff; }
+
+        /* =========================================
+           お問い合わせ・CTA
+        ========================================= */
+       .cta-box {
+            background: var(--secondary-color);
+            color: #fff;
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        /* =========================================
+           レスポンシブ調整
+        ========================================= */
+        @media (max-width: 768px) {
+            body { font-size: 16px; }
+           .hero h1 { font-size: 1.6rem; }
+           .hero-stats { flex-direction: column; }
+           .header-tel { font-size: 1.2rem; }
+           .section-padding { padding: 50px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <div class="logo">相続専門・〇〇税理士事務所</div>
+            <div class="header-contact">
+                <p style="font-size: 0.8rem;">ご相談・ご予約はこちら（受付 9:00〜21:00）</p>
+                <a href="tel:0120-000-000" class="header-tel">📞 0120-000-000</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <p>東京都の不動産・空き家相続でお困りの方へ</p>
+            <h1>「相続税、いくらかかる？」の不安を<br>土地評価に強い専門家が解決します</h1>
+            <p>初回相談無料 / 土日祝対応 / 東京23区・多摩地域全域対応</p>
+            
+            <a href="#contact" class="btn">まずは無料で相談してみる</a>
+
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <span class="stat-num">累計 31,000件超</span>
+                    <span>相続税申告の実績[1]</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-num">0.5% 未満</span>
+                    <span>極めて低い税務調査率[2]</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-num">100%</span>
+                    <span>書面添付制度で安心を担保[2]</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center">こんなお悩み、ありませんか？</h2>
+            <div class="problem-list">
+                <div class="problem-item">親が亡くなり、相続税の申告が必要か分からない</div>
+                <div class="problem-item">東京都内の実家が「空き家」になるのが心配</div>
+                <div class="problem-item">税務署からお尋ねが届いたが、どうすればいいか不安</div>
+                <div class="problem-item">2次相続まで考えた一番得な分け方を知りたい</div>
+                <div class="problem-item">遺品整理や不動産の売却までまとめて任せたい</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-gray">
+        <div class="container">
+            <h2 class="text-center">当事務所が選ばれる3つの理由</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <img src="https://via.placeholder.com/350x200?text=Tokyo+Real+Estate" alt="東京都の土地評価">
+                    <h3>1. 東京都の土地評価に自信あり</h3>
+                    <p>都内特有の複雑な土地（狭小地、借地権など）を熟知。徹底した現地調査と特例活用で、納税額を最小化します[3, 4]。</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://via.placeholder.com/350x200?text=One-stop+Support" alt="ワンストップ支援">
+                    <h3>2. 遺品整理から売却まで丸ごと</h3>
+                    <p>司法書士・遺品整理業者・不動産会社と強力連携。面倒な手続きを一つの窓口ですべて完了できます。</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://via.placeholder.com/350x200?text=Clear+Fees" alt="明確な料金体系">
+                    <h3>3. 業界相場に基づいた明確な報酬</h3>
+                    <p>「後から追加料金」はありません。遺産総額に応じた透明性の高い料金表をご提示し、ご納得いただいてから着手します[5, 6]。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center">申告報酬の目安</h2>
+            <p class="text-center" style="margin-top:10px;">遺産総額の0.5％〜1.0％が一般的な相場です[7, 8]</p>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>遺産総額の目安</th>
+                        <th>基本報酬（税込）</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>〜5,000万円</td>
+                        <td>250,000円〜</td>
+                    </tr>
+                    <tr>
+                        <td>〜1億円</td>
+                        <td>500,000円〜</td>
+                    </tr>
+                    <tr>
+                        <td>〜2億円</td>
+                        <td>850,000円〜</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.9rem; margin-top: 15px;">※相続人の数、土地の筆数、非上場株式の有無により加算が発生する場合がございます[6]。</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-gray">
+        <div class="container">
+            <div class="cta-box">
+                <h2>まずはお気軽にお話しください</h2>
+                <p style="margin-bottom: 30px;">「何から始めればいい？」という段階でのご相談が、一番の節税につながります。</p>
+                
+                <div style="margin-bottom: 40px;">
+                    <p>お電話でのご予約（通話料無料）</p>
+                    <a href="tel:0120-000-000" style="font-size: 2.5rem; font-weight: bold;">0120-000-000</a>
+                    <p>平日 9:00-21:00 / 土日祝 9:00-18:00</p>
+                </div>
+
+                <a href="#" class="btn" style="background: #fff; color: var(--secondary-color);">メールで無料相談を予約する</a>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: var(--primary-color); color: rgba(255,255,255,0.7); padding: 40px 0; font-size: 0.9rem;">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                <div>
+                    <p style="color: #fff; font-weight: bold;">〇〇税理士事務所</p>
+                    <p>東京都新宿区〇〇1-2-3 〇〇ビル5F</p>
+                    <p>所属：東京税理士会（登録番号：第00000号）</p>
+                </div>
+                <nav>
+                    <ul style="display: flex; gap: 20px;">
+                        <li><a href="#">運営者情報</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">サイトマップ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="text-center" style="margin-top: 30px;">&copy; 2024 〇〇税理士事務所 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
